@@ -1,0 +1,78 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "bots" %}{% endblock title %}
+
+
+{% block style %}
+        <style>
+        #chartdiv, #chartdiiiv {
+            width: 90%;
+        }
+
+        #chart1, #chart2, #chart3 {
+            width: 90%;
+        {#height: 300px;#}
+        }
+
+        #service_table thead tr th {
+            font-weight: bolder;
+            font-size: 1.25rem;
+
+        }
+        #service_table tbody tr td,#service_table tbody tr th {
+            font-weight: bold;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.25rem;
+                    }
+    </style>
+{% endblock %}
+{% block page_content2 %}
+
+
+{% endblock page_content2 %}
+{% block page_js %}
+        <script>
+        var element = document.getElementById("menu_bot");
+        element.classList.add("active");
+    </script>
+    <script src="{% static 'js/highcharts/drilldown.js' %}"></script>
+    <script src="{% static 'js/charts.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+          //  $.ajax({
+           //     type: 'GET',
+          //      url: "http://127.0.0.1:8000/info/bots_page/",
+          //      success: function (data) {
+                    //console.log(data);
+
+           //         get_area_chart('area_chart', data.area_results.categories, data.area_results.values, 'تعداد آدرس آلوده');
+          //          get_bar_chart('malware_chart', data.malware_results, 'تعداد', 20, false, false, data.malware_drilldown);
+           //         get_bar_chart('ip_chart', data.ip_results, 'تعداد', 50);
+           //         get_bar_chart('server_control_chart', data.server_control_results, 'تعداد', 50);
+            //        $.each(data.list_server_control_results,function(index,value){
+           //         $('tbody').append('<tr> <th scope="row">'+(index+1)+'</th><td>'+value[0]+'</td> <td>'+value[1]+'</td> </tr>');
+           //         });
+
+            //    },
+                //  setTimeout(function(){
+                // Code to run after the pause
+                //  }, 4000);
+                //  window.location = "/";
+                // window.history.go(-1)
+                // window.navigate("home.html")
+                // error: handleAjaxError
+           //     error: function (xhr, type, exception) {
+            //        console.log("No authenticated");
+                  // window.location=("/auth/login")
+
+
+           //     }
+         //   });
+
+       });
+
+    </script>
+{% endblock %}
